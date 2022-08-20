@@ -1,6 +1,7 @@
 #include "monty.h"
 
- /** nop - does nothing
+ /** 
+ * nop - does nothing
  * @stack: the stack
  * @line_number: instruction line number
  * Return: nothing
