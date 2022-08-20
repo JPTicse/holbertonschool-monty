@@ -29,11 +29,6 @@ void interpreter(char *instruction, unsigned int line, stack_t **stack)
 					bol = 1;
 
 				}
-				else
-				{
-					dprintf(STDERR_FILENO, "L%d: unknown instruction %s\n", line, opcode);
-					argument[0] = "FAIL";
-					return; }
 				if (bol)
 					break;
 				i++;
@@ -44,7 +39,11 @@ void interpreter(char *instruction, unsigned int line, stack_t **stack)
 				if (strcmp(argument[0], "FAIL") == 0)
 					return;
 				argument[0] = "reset"; }
-
+			else
+			{
+				dprintf(STDERR_FILENO, "L%d: unknown instruction %s\n", line, opcode);
+				argument[0] = "FAIL";
+				return; }
 		}
 	}
 }
