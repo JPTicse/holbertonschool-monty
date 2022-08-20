@@ -16,13 +16,17 @@
 char *argument[2];
 
 #define INSTRUCTIONS { \
-	{"push",push},\
+	{"push", push},\
 	{"pall", pall},\
 	{"pint", pint},\
 	{"pop", pop},\
 	{"swap", swap},\
 	{"nop", nop},\
 	{"add", add},\
+	{"sub", sub},\
+	{"div", _div},\
+	{"mul", mul},\
+	{"mod", mod},\
 }
 
 /* END */
